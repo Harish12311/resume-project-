@@ -1,0 +1,126 @@
+{% extends 'core/base.html' %}
+{% include 'core/cdnfile.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 30px;
+        }
+        .contact-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form .form-group {
+            position: relative;
+        }
+        .contact-form .form-group i {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            color: #6c757d;
+        }
+        .contact-form .form-control {
+            padding-left: 40px;
+        }
+        .contact-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        .services-heading {
+            text-align: center;
+            color: #ffc107;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ffc107;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .services-icons {
+            font-size: 2rem;
+            color: #ffc107;
+            margin-right: 10px;
+        }
+        .services-item {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Services Section -->
+    <h1 class="services-heading"><i class="fas fa-cogs services-icons"></i>SERVICES</h1>
+    <div class="row text-center text-dark mb-5">
+        <div class="col-md-4 services-item">
+            <i class="fas fa-laptop-code services-icons"></i>
+            <h5>Web Development</h5>
+        </div>
+        <div class="col-md-4 services-item">
+            <i class="fas fa-mobile-alt services-icons"></i>
+            <h5>Mobile App Development</h5>
+        </div>
+        <div class="col-md-4 services-item">
+            <i class="fas fa-cloud services-icons"></i>
+            <h5>Cloud Services</h5>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="contact-form">
+                <h2 class="text-center mb-4"><i class="fas fa-envelope services-icons"></i>Contact Us</h2>
+                <form action="/submit" method="post">
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full_name" class="form-control" placeholder="Your Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-envelope"></i>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-tag"></i>
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-comment"></i>
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+{% endblock content %}

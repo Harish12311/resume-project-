@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% include 'core/cdnfile.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <div class="text-center">  
+
+       
+     <img src="{% static 'images/fr.png' %}" alt="profilePic" class="img-thumbnail" width="250px" height="150px">
+     <div class='mt-4 text-white text-justify'>
+         <h1 class='front-weight-bold font-family: "Sofia", sans-serif;'><i>hello</i></h1>
+        <div class="px-4">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo 
+                
+                atque voluptatem quod in ea culpa eligendi minus fugit earum sint, 
+                impedit totam! Blanditiis dolor tenetur iste. Quibusdam enim cum repudiandae. </p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias sint eveniet at
+                    
+            quam soluta adipisci, tenetur asperiores commodi ipsum quod. Vitae dolorem similique voluptatum
+             harum non praesentium reprehenderit voluptas quas sunt, nobis eius itaque sit ducimus eos, impedit
+             
+             assumenda! Aliquid ipsam quae sequi magni optio consequuntur ad odio ea cum deserunt nisi assumenda
+              voluptate temporibus, accusantium aperiam ut! Natus nihil, veritatis voluptatibus iure pariatur ipsam 
+               quis beatae velit laborum vitae quaerat quidem quae aperiam voluptas rerum est cupiditate distinctio eum optio quisquam, exercitationem dolorum. Ex placeat nihil fugiat quaerat, possimus facere fugit numquam eius, voluptatibus quae nisi reiciendis vel.</p>
+        </div>
+     </div>
+     <a href="{% url 'contact' %}" class="btn btn-warning my-3">hire my</a>
+     <a href="{% url 'contact' %}" class="btn btn-info my-3">contect</a>
+     
+    </div>
+{% endblock content %}
